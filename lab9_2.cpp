@@ -1,4 +1,16 @@
-//cout << "-------------------- SOTUS ---------------------";
-//cout << textline;
-//cout << "-------------------- SOTUS ---------------------";
-//Don't forget to change cout to output filestream
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main(){
+    ifstream cheer("cheerbook.txt");
+    ofstream cheerbook("cheerbook_copy.txt");
+    string textline;
+    cheerbook << "-------------------- SOTUS ---------------------" << endl;
+    while (getline(cheer,textline)){
+        cheerbook << textline << endl;
+    }
+    cheerbook << "-------------------- SOTUS ---------------------";
+    return 0;
+}
